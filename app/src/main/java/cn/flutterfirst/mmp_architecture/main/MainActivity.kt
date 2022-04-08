@@ -8,16 +8,15 @@ import cn.flutterfirst.mmp_architecture.StateChanged
 class MainActivity : MainPresenter() {
 
     override fun initViewsBeforeFirstSetState() {
-        // 可在此处初始化 RecyclerView 的 LayoutManager
     }
 
-    @StateChanged("addCount")
+    @StateChanged("count")
     fun countChanged() {
-        println("MMP: addCount changed, new value = $count")
+        println("count changed, new value = $count")
     }
 
     @StateChanged("editValue")
     fun editValueChanged() {
-        println("MMP: editValue changed, new value = $editValue")
+        println("editValue changed, new value = $editValue")
     }
 }

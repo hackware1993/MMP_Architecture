@@ -11,7 +11,7 @@ abstract class MainPresenter : BaseMMPActivity() {
     protected var editValue: String? = null
         get() {
             if (field == null || field!!.isEmpty()) {
-                return "空"
+                return ""
             }
             return field
         }
@@ -34,9 +34,9 @@ abstract class MainPresenter : BaseMMPActivity() {
     protected var hintText: String? = null
         get() {
             return if (count == countMax) {
-                "不能再加了"
+                "Can't add any more"
             } else {
-                "不能再减了"
+                "Can't sub any more"
             }
         }
 
