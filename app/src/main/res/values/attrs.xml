@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MMP">
+        <attr name="vClick" format="string" />
+        <attr name="vText" format="string" />
+        <attr name="vEdit" format="string" />
+        <attr name="vEditText" format="string" />
+        <attr name="vVisible" format="string" />
+        <attr name="vEnable" format="string" />
+    </declare-styleable>
+</resources>
