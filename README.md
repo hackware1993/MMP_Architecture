@@ -221,6 +221,8 @@ Layout
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
+![example.gif](https://github.com/hackware1993/MMP_Architecture/blob/main/example.gif?raw=true)
+
 ```
 MIT License
 
