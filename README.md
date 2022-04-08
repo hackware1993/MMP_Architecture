@@ -2,7 +2,7 @@
 
 More Modern Presenter.
 
-A more lightweight and simpler to use MVVM architecture for Android.
+A more lightweight and simpler to use MVVM architecture for Android, Data and views are two-way bound.
 
 Only **300** lines of code.
 
