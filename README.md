@@ -4,6 +4,8 @@ More Modern Presenter.
 
 A more lightweight and simpler to use MVVM architecture for Android.
 
+Only **300** lines of code.
+
 # Example
 
 Presenter
@@ -116,104 +118,60 @@ Layout
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".main.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".main.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:vText="Your input: {{editValue}}" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:vText="Your input: {{editValue}}" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="One-way bound EditText"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/one_way_bind_edit"
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" android:text="One-way bound EditText"
+        android:textSize="20sp" app:layout_constraintBottom_toTopOf="@+id/one_way_bind_edit"
         app:layout_constraintLeft_toLeftOf="@+id/one_way_bind_edit" />
 
-    <EditText
-        android:id="@+id/one_way_bind_edit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="150dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+    <EditText android:id="@+id/one_way_bind_edit" android:layout_width="0dp"
+        android:layout_height="wrap_content" android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="150dp" app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
         app:vEdit="{{editValue}}" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Two-way bound EditText"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/two_way_bind_edit"
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="50dp" android:text="Two-way bound EditText"
+        android:textSize="20sp" app:layout_constraintBottom_toTopOf="@+id/two_way_bind_edit"
         app:layout_constraintLeft_toLeftOf="@+id/two_way_bind_edit" />
 
-    <EditText
-        android:id="@+id/two_way_bind_edit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="250dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+    <EditText android:id="@+id/two_way_bind_edit" android:layout_width="0dp"
+        android:layout_height="wrap_content" android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="250dp" app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
         app:vEditText="{{editValue}}" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:vText="{{count}}" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="50sp" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" app:vText="{{count}}" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="180dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:vText="{{hintText}}"
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp" android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" app:vText="{{hintText}}"
         app:vVisible="{{hintVisibility}}" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:vClick="{{add}}"
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp" android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" app:vClick="{{add}}"
         app:vEnable="{{addEnable}}" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="Sub"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:vClick="{{sub}}"
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp" android:text="Sub"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" app:vClick="{{sub}}"
         app:vEnable="{{subEnable}}" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
