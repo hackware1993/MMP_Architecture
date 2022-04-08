@@ -20,7 +20,6 @@ object MMPInflater : Factory2 {
         }
     }
 
-    // 考虑优化此处的代码
     private fun createView(context: Context, name: String, attrs: AttributeSet): View? {
         var view: View? = null
         try {

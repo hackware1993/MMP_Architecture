@@ -123,7 +123,7 @@ abstract class BaseMMPActivity : Activity() {
             bind(fieldName, view) { field, _ ->
                 val binding = view.getTag(R.id.vBinding) as Binding
                 val text = binding.getPreText() + (getField(field)?.toString()
-                    ?: "") + binding.getPostText();
+                    ?: "") + binding.getPostText()
                 view.text = text
             }
         }
@@ -211,17 +211,13 @@ abstract class BaseMMPActivity : Activity() {
         }
     }
 
-    private fun iteratorView(view: View, filter: Filter) {
-        filter.filter(view)
+    private fun iteratorView(view: View, filter: (view: View) -> Unit) {
+        filter.invoke(view)
         if (view is ViewGroup) {
             for (index in 0 until view.childCount) {
                 iteratorView(view.getChildAt(index), filter)
             }
         }
-    }
-
-    private fun interface Filter {
-        fun filter(view: View)
     }
 
     protected fun setState(initial: Boolean = false, block: () -> Unit) {
