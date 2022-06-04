@@ -10,6 +10,8 @@ Only **300** lines of code.
 Currently implemented using reflection, it can be optimized to automatically generate code using
 Gradle Plugin.
 
+**I have developed the world's fastest general purpose sorting algorithm, which is on average 3 times faster than Quicksort and up to 20 times faster**, [ChenSort](https://github.com/hackware1993/ChenSort)
+
 # Example
 
 Presenter
